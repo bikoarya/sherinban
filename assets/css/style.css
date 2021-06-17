@@ -1,0 +1,63 @@
+ /* Small devices (landscape phones, 576px and up) */
+ @media only screen and (max-width: 600px) {
+ 	.tglKsr {
+ 		margin-left: 105px;
+ 		margin-top: -30px;
+ 	}
+
+ 	.dvc {
+ 		font-size: 10px;
+ 	}
+
+ 	.tglawal {
+ 		height: 25px;
+ 		font-size: 10px;
+ 		width: 140px;
+ 	}
+
+ 	.tgL {
+ 		height: 25px;
+ 		width: 25px;
+ 	}
+
+ 	.cal {
+ 		font-size: 10px;
+ 		margin-left: -4px;
+ 	}
+
+ 	.bt {
+ 		height: 25px;
+ 		width: 25px;
+ 	}
+
+ 	.sch {
+ 		margin-top: 0;
+ 		margin-left: -6px;
+ 		font-size: 12px;
+ 	}
+
+ }
+
+
+ /* Medium devices (tablets, 768px and up) */
+ @media (min-width: 768px) {
+ 	.tglKsr {
+ 		margin-left: 420px;
+ 		margin-top: -30px;
+ 	}
+ }
+
+ /* Large devices (desktops, 992px and up) */
+ @media (min-width: 992px) {
+ 	.tglKsr {
+ 		margin-left: 570px;
+ 		margin-top: -30px;
+ 	}
+ }
+
+ /* Extra large devices (large desktops, 1200px and up) */
+ /* @media (min-width: 1200px) {
+ 	.tglKsr {
+ 		margin-left: 400px;
+ 	}
+ } */

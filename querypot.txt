@@ -1,0 +1,34 @@
+SELECT
+    `v_tmppenjualan`.`id_tmppenjualan` AS `id_tmppenjualan`,
+    `v_tmppenjualan`.`nofaktur` AS `nofaktur`,
+    `v_tmppenjualan`.`kode_barang` AS `kode_barang`,
+    `v_tmppenjualan`.`nama_barang` AS `nama_barang`,
+    `v_tmppenjualan`.`satuan` AS `satuan`,
+    `v_tmppenjualan`.`kategori` AS `kategori`,
+    `v_tmppenjualan`.`kode_produksi` AS `kode_produksi`,
+    `v_tmppenjualan`.`harga_jual` AS `harga_jual`,
+    `v_tmppenjualan`.`id_jasa` AS `id_jasa`,
+    `v_tmppenjualan`.`qty` AS `qty`,
+    `v_tmppenjualan`.`q_1` AS `q_1`,
+    `v_tmppenjualan`.`q_2` AS `q_2`,
+    `v_tmppenjualan`.`pot_1` AS `pot_1`,
+    `v_tmppenjualan`.`pot_2` AS `pot_2`,
+    IF(
+        `v_tmppenjualan`.`q_2` = 0,
+        IF(
+            `v_tmppenjualan`.`qty` >= `v_tmppenjualan`.`q_1`,
+            `v_tmppenjualan`.`pot_1`,
+            0
+        ),
+        IF(
+            `v_tmppenjualan`.`qty` >= `v_tmppenjualan`.`q_2`,
+            `v_tmppenjualan`.`pot_2`,
+            IF(
+                `v_tmppenjualan`.`qty` >= `v_tmppenjualan`.`q_1`,
+                `v_tmppenjualan`.`pot_1`,
+                0
+            )
+        )
+    ) AS `potongan`
+FROM
+    `db_sherin`.`v_tmppenjualan`

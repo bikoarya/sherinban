@@ -1,0 +1,66 @@
+.bg-load {
+	/* background: #000; */
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+
+}
+
+#loading {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border: solid 5px #ccc;
+	border-top-color: #ff6a00;
+	border-radius: 100%;
+
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+
+	animation: putar 5s linear infinite;
+
+
+
+	/* display: none; */
+}
+
+@keyframes putar {
+	from {
+		transform: rotate(0deg)
+	}
+
+	to {
+		transform: rotate(360deg)
+	}
+}
+
+.input-upper {
+	text-transform: uppercase
+}
+
+.input-upper::-webkit-input-placeholder {
+	text-transform: none
+}
+
+.input-upper::-moz-placeholder {
+	text-transform: none
+}
+
+.input-upper:-moz-placeholder {
+	text-transform: none
+}
+
+.input-upper:-ms-placeholder {
+	text-transform: none
+}
+
